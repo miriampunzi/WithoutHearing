@@ -5,8 +5,9 @@
     android:orientation="horizontal"
     android:gravity="center"
     android:id="@+id/linearLayout_rowNotification"
+    android:layout_margin="8sp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageView_rowElement_icon"
@@ -38,6 +39,7 @@
                 android:id="@+id/textView_rowElement_what"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Tap open"
                 />
 
