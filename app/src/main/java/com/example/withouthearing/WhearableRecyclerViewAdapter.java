@@ -13,11 +13,11 @@ import java.util.ArrayList;
 
 import utils.HouseNotification;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.HouseNotificationViewHolder> {
+public class WhearableRecyclerViewAdapter extends RecyclerView.Adapter<WhearableRecyclerViewAdapter.HouseNotificationViewHolder> {
 
     private ArrayList<HouseNotification> houseNotifications;
 
-    public RecyclerViewAdapter(ArrayList<HouseNotification> houseNotifications) {
+    public WhearableRecyclerViewAdapter(ArrayList<HouseNotification> houseNotifications) {
         this.houseNotifications = houseNotifications;
     }
 
