@@ -15,6 +15,8 @@ public class MainActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // TODO put scrollbar and visible selection of row element
+
         WearableRecyclerView houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
         houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
         houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);

@@ -1,5 +1,7 @@
 package com.example.withouthearing;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,12 +31,22 @@ public class WhearableRecyclerViewAdapter extends RecyclerView.Adapter<Whearable
     }
 
     @Override
-    public void onBindViewHolder(HouseNotificationViewHolder holder, int position) {
+    public void onBindViewHolder(HouseNotificationViewHolder holder, final int position) {
         holder.whereTextView.setText(houseNotifications.get(position).getWhere());
         holder.whatTextView.setText(houseNotifications.get(position).getWhat());
         holder.whenTextView.setText(houseNotifications.get(position).getWhen());
 
-        // TODO set listeners here
+        holder.parentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+
+                Intent openSingleNotification = new Intent(context, SingleNotificationActivity.class);
+                openSingleNotification.putExtra("position", position);
+
+                context.startActivity(openSingleNotification);
+            }
+        });
     }
 
     @Override
