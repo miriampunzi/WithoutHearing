@@ -6,10 +6,10 @@ import android.support.wearable.activity.WearableActivity;
 import androidx.wear.widget.WearableLinearLayoutManager;
 import androidx.wear.widget.WearableRecyclerView;
 
-import com.example.withouthearing.adapters.HouseNotificationsAdapter;
-import com.example.withouthearing.database.DB;
+import adapters.NotificationsAdapter;
+import database.DB;
 
-public class ListNotificationsActivity extends WearableActivity {
+public class HouseNotificationListActivity extends WearableActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +21,8 @@ public class ListNotificationsActivity extends WearableActivity {
         WearableRecyclerView houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
         houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
         houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);
-        HouseNotificationsAdapter houseNotificationsAdapter = new HouseNotificationsAdapter(DB.houseNotifications);
-        houseNotificationsRecyclerView.setAdapter(houseNotificationsAdapter);
+        NotificationsAdapter notificationsAdapter = new NotificationsAdapter(DB.houseNotifications);
+        houseNotificationsRecyclerView.setAdapter(notificationsAdapter);
         WearableLinearLayoutManager houseNotificationsLayoutManager = new WearableLinearLayoutManager(this);
         houseNotificationsRecyclerView.setLayoutManager(houseNotificationsLayoutManager);
 

@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.widget.TextView;
 
-import com.example.withouthearing.database.DB;
-import com.example.withouthearing.utils.HouseNotification;
+import database.DB;
+import utils.HouseNotification;
 
 public class SingleNotificationActivity extends WearableActivity {
 

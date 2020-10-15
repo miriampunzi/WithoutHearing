@@ -1,11 +1,11 @@
-package com.example.withouthearing.database;
+package database;
 
 import com.example.withouthearing.R;
 
 import java.util.ArrayList;
 
-import com.example.withouthearing.utils.HouseNotification;
-import com.example.withouthearing.utils.Sensor;
+import utils.HouseNotification;
+import utils.Sensor;
 
 public class DB {
 

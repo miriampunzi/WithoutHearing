@@ -1,4 +1,4 @@
-package com.example.withouthearing.adapters;
+package adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,20 +16,20 @@ import com.example.withouthearing.SingleNotificationActivity;
 
 import java.util.ArrayList;
 
-import com.example.withouthearing.utils.HouseNotification;
+import utils.HouseNotification;
 
-public class HouseNotificationsAdapter extends RecyclerView.Adapter<HouseNotificationsAdapter.HouseNotificationViewHolder> {
+public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdapter.HouseNotificationViewHolder> {
 
     private ArrayList<HouseNotification> houseNotifications;
 
-    public HouseNotificationsAdapter(ArrayList<HouseNotification> houseNotifications) {
+    public NotificationsAdapter(ArrayList<HouseNotification> houseNotifications) {
         this.houseNotifications = houseNotifications;
     }
 
     @NonNull
     @Override
     public HouseNotificationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_house_notification, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_notification, parent, false);
         return new HouseNotificationViewHolder(view);
     }
 

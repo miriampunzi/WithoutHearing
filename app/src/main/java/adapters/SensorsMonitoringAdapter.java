@@ -1,4 +1,4 @@
-package com.example.withouthearing.adapters;
+package adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,7 @@ import com.example.withouthearing.R;
 
 import java.util.ArrayList;
 
-import com.example.withouthearing.utils.Sensor;
+import utils.Sensor;
 
 public class SensorsMonitoringAdapter extends RecyclerView.Adapter<SensorsMonitoringAdapter.SensorsViewHolder> {
 
@@ -27,7 +27,7 @@ public class SensorsMonitoringAdapter extends RecyclerView.Adapter<SensorsMonito
     @NonNull
     @Override
     public SensorsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sensor_monitoring, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sensor, parent, false);
         return new SensorsViewHolder(view);
     }
 
