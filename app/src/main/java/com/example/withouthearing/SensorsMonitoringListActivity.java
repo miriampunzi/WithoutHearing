@@ -9,7 +9,7 @@ import androidx.wear.widget.WearableRecyclerView;
 import adapters.SensorsMonitoringAdapter;
 import database.DB;
 
-public class SensorsMonitoringActivity extends WearableActivity {
+public class SensorsMonitoringListActivity extends WearableActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
