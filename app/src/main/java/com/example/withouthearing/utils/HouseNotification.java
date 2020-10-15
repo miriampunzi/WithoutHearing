@@ -1,6 +1,4 @@
-package utils;
-
-import java.sql.Time;
+package com.example.withouthearing.utils;
 
 public class HouseNotification {
 

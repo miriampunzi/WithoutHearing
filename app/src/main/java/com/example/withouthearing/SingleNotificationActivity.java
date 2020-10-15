@@ -1,20 +1,19 @@
 package com.example.withouthearing;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.widget.TextView;
 
-import database.DB;
-import utils.HouseNotification;
+import com.example.withouthearing.database.DB;
+import com.example.withouthearing.utils.HouseNotification;
 
 public class SingleNotificationActivity extends WearableActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.single_notification);
+        setContentView(R.layout.view_single_notification);
 
         Intent openSingleNotification = getIntent();
         int position = openSingleNotification.getIntExtra("position", -1);

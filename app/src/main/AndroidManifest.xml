@@ -25,7 +25,7 @@
             android:value="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.withouthearing.ListNotificationsActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
         </activity>
 
         <activity
-            android:name=".SingleNotificationActivity"
+            android:name="com.example.withouthearing.SingleNotificationActivity"
             android:label="@string/app_name">
         </activity>
     </application>

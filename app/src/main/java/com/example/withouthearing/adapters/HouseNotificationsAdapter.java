@@ -1,4 +1,4 @@
-package com.example.withouthearing;
+package com.example.withouthearing.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,22 +11,25 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.withouthearing.R;
+import com.example.withouthearing.SingleNotificationActivity;
+
 import java.util.ArrayList;
 
-import utils.HouseNotification;
+import com.example.withouthearing.utils.HouseNotification;
 
-public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdapter.HouseNotificationViewHolder> {
+public class HouseNotificationsAdapter extends RecyclerView.Adapter<HouseNotificationsAdapter.HouseNotificationViewHolder> {
 
     private ArrayList<HouseNotification> houseNotifications;
 
-    public NotificationsAdapter(ArrayList<HouseNotification> houseNotifications) {
+    public HouseNotificationsAdapter(ArrayList<HouseNotification> houseNotifications) {
         this.houseNotifications = houseNotifications;
     }
 
     @NonNull
     @Override
     public HouseNotificationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_notification, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_house_notification, parent, false);
         return new HouseNotificationViewHolder(view);
     }
 

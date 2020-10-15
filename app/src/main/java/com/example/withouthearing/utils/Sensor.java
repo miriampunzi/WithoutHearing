@@ -1,6 +1,4 @@
-package utils;
-
-import android.widget.ImageView;
+package com.example.withouthearing.utils;
 
 public class Sensor {
 

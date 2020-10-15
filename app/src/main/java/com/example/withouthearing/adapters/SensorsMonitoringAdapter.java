@@ -1,7 +1,5 @@
-package com.example.withouthearing;
+package com.example.withouthearing.adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.withouthearing.R;
+
 import java.util.ArrayList;
 
-import utils.Sensor;
+import com.example.withouthearing.utils.Sensor;
 
 public class SensorsMonitoringAdapter extends RecyclerView.Adapter<SensorsMonitoringAdapter.SensorsViewHolder> {
 
@@ -27,7 +27,7 @@ public class SensorsMonitoringAdapter extends RecyclerView.Adapter<SensorsMonito
     @NonNull
     @Override
     public SensorsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sensor, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sensor_monitoring, parent, false);
         return new SensorsViewHolder(view);
     }
 
