@@ -13,17 +13,25 @@ public class MainActivity extends WearableActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.monitoring_sensors_list);
 
         // TODO put scrollbar and visible selection of row element
 
-        WearableRecyclerView houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
+        /*WearableRecyclerView houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
         houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
         houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);
-        WhearableRecyclerViewAdapter whearableRecyclerViewAdapter = new WhearableRecyclerViewAdapter(DB.houseNotifications);
-        houseNotificationsRecyclerView.setAdapter(whearableRecyclerViewAdapter);
+        NotificationsAdapter notificationsAdapter = new NotificationsAdapter(DB.houseNotifications);
+        houseNotificationsRecyclerView.setAdapter(notificationsAdapter);
         WearableLinearLayoutManager houseNotificationsLayoutManager = new WearableLinearLayoutManager(this);
-        houseNotificationsRecyclerView.setLayoutManager(houseNotificationsLayoutManager);
+        houseNotificationsRecyclerView.setLayoutManager(houseNotificationsLayoutManager);*/
+
+        WearableRecyclerView sensorsRecyclerView = findViewById(R.id.recyclerView_monitoringSensors);
+        sensorsRecyclerView.setEdgeItemsCenteringEnabled(true);
+        sensorsRecyclerView.setCircularScrollingGestureEnabled(true);
+        SensorsMonitoringAdapter sensorsAdapter = new SensorsMonitoringAdapter(DB.sensors);
+        sensorsRecyclerView.setAdapter(sensorsAdapter);
+        WearableLinearLayoutManager sensorsLayoutManager = new WearableLinearLayoutManager(this);
+        sensorsRecyclerView.setLayoutManager(sensorsLayoutManager);
 
         // Enables Always-on
         setAmbientEnabled();
