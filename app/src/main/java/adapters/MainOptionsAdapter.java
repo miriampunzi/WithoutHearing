@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.withouthearing.HouseNotificationListActivity;
 import com.example.withouthearing.R;
 import com.example.withouthearing.SingleNotificationActivity;
 
@@ -39,6 +40,28 @@ public class MainOptionsAdapter extends RecyclerView.Adapter<MainOptionsAdapter.
     public void onBindViewHolder(MainOptionsViewHolder holder, final int position) {
         holder.icon.setImageResource(mainOptions.get(position).getImageIDResource());
         holder.name.setText(mainOptions.get(position).getName());
+
+        holder.parentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+
+                switch (position) {
+                    case 0: // notifications
+                        Intent openHouseNotificationsListActivity = new Intent(context, HouseNotificationListActivity.class);
+                        context.startActivity(openHouseNotificationsListActivity);
+                        break;
+
+                    case 1: // controls
+                        // TODO open controls activity
+                        break;
+
+                    case 2: // settings
+                        // TODO open settings activity
+                        break;
+                }
+            }
+        });
     }
 
     @Override
