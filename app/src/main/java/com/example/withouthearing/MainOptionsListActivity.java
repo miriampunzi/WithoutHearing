@@ -1,14 +1,14 @@
 package com.example.withouthearing;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
-import android.support.wearable.view.WearableListView;
+import android.view.View;
 
-import androidx.wear.widget.WearableLinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.wear.widget.WearableRecyclerView;
 
-import adapters.MainOptionsAdapter;
-import adapters.SensorsMonitoringAdapter;
 import database.DB;
 
 public class MainOptionsListActivity extends WearableActivity {
@@ -18,12 +18,21 @@ public class MainOptionsListActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_main_options);
 
-        WearableRecyclerView mainOptionsRecyclerView = findViewById(R.id.recycleView_mainOptions);
-        mainOptionsRecyclerView.setEdgeItemsCenteringEnabled(true);
-        mainOptionsRecyclerView.setCircularScrollingGestureEnabled(true);
-        MainOptionsAdapter mainOptionsAdapter = new MainOptionsAdapter(DB.mainOptions);
-        mainOptionsRecyclerView.setAdapter(mainOptionsAdapter);
-        WearableLinearLayoutManager mainOptionsLayoutManager = new WearableLinearLayoutManager(this);
-        mainOptionsRecyclerView.setLayoutManager(mainOptionsLayoutManager);
+
+    }
+
+    public void openHouseNotificationView(View view) {
+        Intent openNotificationView = new Intent(this, HouseNotificationListActivity.class);
+        startActivity(openNotificationView);
+    }
+
+    public void openControlsView(View view) {
+        Intent openControlsView = new Intent(this, ControlsActivity.class);
+        startActivity(openControlsView);
+    }
+
+    public void openSettingsView(View view) {
+        Intent openSettingsView = new Intent(this, HouseNotificationListActivity.class);
+        startActivity(openSettingsView);
     }
 }

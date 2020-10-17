@@ -31,10 +31,4 @@ public class DB {
         add(new Sensor(R.drawable.icon_fire, "Heater", "BEDROOM"));
     }};
 
-    public static ArrayList<MainOption> mainOptions = new ArrayList<MainOption>() {{
-        add(new MainOption("Notifications", R.drawable.icon_notification));
-        // TODO resize controls icon
-        add(new MainOption("Controls", R.drawable.icon_settings));
-        add(new MainOption("Settings", R.drawable.icon_settings));
-    }};
 }
