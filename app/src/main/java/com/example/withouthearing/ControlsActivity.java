@@ -17,4 +17,14 @@ public class ControlsActivity extends WearableActivity {
         Intent openCamerasListActivity = new Intent(this, CamerasActivity.class);
         startActivity(openCamerasListActivity);
     }
+
+    public void openSensorsListActivit(View view) {
+        Intent openSensorsListActivit = new Intent(this, SensorsMonitoringListActivity.class);
+        startActivity(openSensorsListActivit);
+    }
+
+    public void openHouseMapOverviewActivity(View view) {
+        Intent openHouseMapOverviewActivity = new Intent(this, HouseMapOverviewActivity.class);
+        startActivity(openHouseMapOverviewActivity);
+    }
 }

@@ -63,6 +63,16 @@
             android:name=".CameraViewActivity"
             android:label="@string/app_name">
         </activity>
+
+        <activity
+            android:name=".SensorsMonitoringListActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".HouseMapOverviewActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>
