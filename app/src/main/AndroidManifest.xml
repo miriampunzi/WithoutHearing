@@ -43,6 +43,11 @@
             android:name=".SingleNotificationActivity"
             android:label="@string/app_name">
         </activity>
+
+        <activity
+            android:name=".ControlsActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

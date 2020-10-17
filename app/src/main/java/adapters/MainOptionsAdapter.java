@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.withouthearing.ControlsActivity;
 import com.example.withouthearing.HouseNotificationListActivity;
 import com.example.withouthearing.R;
 import com.example.withouthearing.SingleNotificationActivity;
@@ -53,7 +54,8 @@ public class MainOptionsAdapter extends RecyclerView.Adapter<MainOptionsAdapter.
                         break;
 
                     case 1: // controls
-                        // TODO open controls activity
+                        Intent openControlsViewActivity = new Intent(context, ControlsActivity.class);
+                        context.startActivity(openControlsViewActivity);
                         break;
 
                     case 2: // settings
