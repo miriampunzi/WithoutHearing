@@ -11,5 +11,7 @@ public class HouseMapOverviewActivity extends WearableActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_housemap);
+
+        // TODO make view zoommable
     }
 }
