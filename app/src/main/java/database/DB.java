@@ -4,6 +4,7 @@ import com.example.withouthearing.R;
 
 import java.util.ArrayList;
 
+import utils.Camera;
 import utils.HouseNotification;
 import utils.Sensor;
 import utils.Setting;
@@ -40,4 +41,9 @@ public class DB {
         add(new Setting("Set priorities", R.drawable.icon_notification));
     }};
 
+    public static ArrayList<Camera> cameras = new ArrayList<Camera>() {{
+       add(new Camera("Door Bell", R.mipmap.camera_door_round));
+       add(new Camera("Living Room", R.mipmap.camera_livingroom_round));
+       add(new Camera("Study Room", R.mipmap.camera_studio_round));
+    }};
 }
