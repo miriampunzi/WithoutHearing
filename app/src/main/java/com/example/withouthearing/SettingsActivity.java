@@ -6,7 +6,6 @@ import android.support.wearable.activity.WearableActivity;
 import androidx.wear.widget.WearableLinearLayoutManager;
 import androidx.wear.widget.WearableRecyclerView;
 
-import adapters.NotificationsAdapter;
 import adapters.SettingsAdapter;
 import database.DB;
 

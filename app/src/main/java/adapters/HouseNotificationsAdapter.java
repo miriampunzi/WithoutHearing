@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.withouthearing.HouseNotificationListActivity;
 import com.example.withouthearing.R;
 import com.example.withouthearing.SingleNotificationActivity;
 
@@ -18,12 +19,21 @@ import java.util.ArrayList;
 
 import utils.HouseNotification;
 
-public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdapter.HouseNotificationViewHolder> {
+public class HouseNotificationsAdapter extends RecyclerView.Adapter<HouseNotificationsAdapter.HouseNotificationViewHolder> {
 
     private ArrayList<HouseNotification> houseNotifications;
+    private HouseNotificationListActivity houseNotificationListActivity;
 
-    public NotificationsAdapter(ArrayList<HouseNotification> houseNotifications) {
+    public HouseNotificationsAdapter(HouseNotificationListActivity houseNotificationListActivity, ArrayList<HouseNotification> houseNotifications) {
+        this.houseNotificationListActivity = houseNotificationListActivity;
         this.houseNotifications = houseNotifications;
+    }
+
+    public void deleteItem(int position) {
+        HouseNotification recentlyDeletedItem = houseNotifications.get(position);
+        int recentlyDeletedItemPosition = position;
+        houseNotifications.remove(position);
+        notifyItemRemoved(position);
     }
 
     @NonNull
