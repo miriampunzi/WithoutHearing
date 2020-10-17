@@ -1,11 +1,11 @@
 package utils;
 
-public class MainOption {
+public class Setting {
 
     private String name;
     private int imageIDResource;
 
-    public MainOption(String name, int imageIDResource) {
+    public Setting(String name, int imageIDResource) {
         this.name = name;
         this.imageIDResource = imageIDResource;
     }

@@ -32,7 +32,7 @@ public class MainOptionsListActivity extends WearableActivity {
     }
 
     public void openSettingsView(View view) {
-        Intent openSettingsView = new Intent(this, HouseNotificationListActivity.class);
+        Intent openSettingsView = new Intent(this, SettingsActivity.class);
         startActivity(openSettingsView);
     }
 }

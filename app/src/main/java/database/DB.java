@@ -5,8 +5,8 @@ import com.example.withouthearing.R;
 import java.util.ArrayList;
 
 import utils.HouseNotification;
-import utils.MainOption;
 import utils.Sensor;
+import utils.Setting;
 
 public class DB {
 
@@ -23,12 +23,21 @@ public class DB {
         add(new HouseNotification("LIVINGROOM", "Air condition on", "3 days ago"));
     }};
 
+    // TODO icon drop
     public static ArrayList<Sensor> sensors = new ArrayList<Sensor>() {{
         add(new Sensor(R.drawable.icon_drop, "Shower Tap", "BATHROOM"));
         add(new Sensor(R.drawable.icon_drop, "Sink", "BATHROOM"));
         add(new Sensor(R.drawable.icon_fire, "Stove", "KITCHEN"));
         add(new Sensor(R.drawable.icon_volume, "Television", "LIVING ROOM"));
         add(new Sensor(R.drawable.icon_fire, "Heater", "BEDROOM"));
+    }};
+
+    // TODO adjust icons
+    public static ArrayList<Setting> settings = new ArrayList<Setting>() {{
+        add(new Setting("Notification", R.drawable.icon_notification));
+        add(new Setting("Lights customization", R.drawable.icon_notification));
+        add(new Setting("Modify house map", R.drawable.icon_notification));
+        add(new Setting("Set priorities", R.drawable.icon_notification));
     }};
 
 }
