@@ -9,15 +9,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import database.DB;
+import utils.Constants;
 import utils.HouseNotification;
 
 public class HomePageActivity extends WearableActivity {
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.view_home_page);
+        updateUI();
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_home_page);
+        updateUI();
+    }
 
+    private void updateUI() {
         ImageView statusImageView = findViewById(R.id.imageView_homePage_status);
         TextView statusTextView = findViewById(R.id.textView_homePage_text);
         TextView whereTextView = findViewById(R.id.textView_homePage_where);
@@ -64,5 +75,16 @@ public class HomePageActivity extends WearableActivity {
     public void openMainOptions(View view) {
         Intent openMainOptions = new Intent(this, MainOptionsListActivity.class);
         startActivity(openMainOptions);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Constants.SINGLE_HOUSE_NOTIFICATION_ACTIVITY) {
+            if (resultCode == Constants.DELETED_HOUSE_NOTIFICATION){
+
+            }
+        }
     }
 }

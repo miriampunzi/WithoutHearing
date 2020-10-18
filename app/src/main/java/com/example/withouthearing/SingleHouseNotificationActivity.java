@@ -1,6 +1,7 @@
 package com.example.withouthearing;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.view.View;
@@ -31,6 +32,10 @@ public class SingleHouseNotificationActivity extends WearableActivity {
             when.setText(currentHouseNotification.getWhen());
             TextView what = findViewById(R.id.textView_singleNotification_what);
             what.setText(currentHouseNotification.getWhat());
+
+            if (currentHouseNotification.isPriority()) {
+                what.setTextColor(Color.RED);
+            }
         }
     }
 

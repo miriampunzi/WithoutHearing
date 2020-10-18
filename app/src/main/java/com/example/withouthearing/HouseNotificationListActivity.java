@@ -3,6 +3,8 @@ package com.example.withouthearing;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.wear.widget.WearableLinearLayoutManager;
@@ -18,22 +20,48 @@ public class HouseNotificationListActivity extends WearableActivity {
     HouseNotificationsAdapter houseNotificationsAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onResume() {
+        super.onResume();
         setContentView(R.layout.list_house_notifications);
-
-        houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
-        houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
-        houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);
-
-        houseNotificationsAdapter = new HouseNotificationsAdapter(this, DB.houseNotifications);
-        houseNotificationsRecyclerView.setAdapter(houseNotificationsAdapter);
-
-        WearableLinearLayoutManager houseNotificationsLayoutManager = new WearableLinearLayoutManager(this);
-        houseNotificationsRecyclerView.setLayoutManager(houseNotificationsLayoutManager);
+        updateUI();
 
         // Enables Always-on
         setAmbientEnabled();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.list_house_notifications);
+        updateUI();
+
+        // Enables Always-on
+        setAmbientEnabled();
+    }
+
+    private void updateUI() {
+        if (DB.houseNotifications.size() != 0) {
+            TextView emptyBoxTextView = findViewById(R.id.textView_listHouseNotifications_emptyBox);
+            emptyBoxTextView.setVisibility(View.GONE);
+
+            houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
+            houseNotificationsRecyclerView.setVisibility(View.VISIBLE);
+            houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
+            houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);
+
+            houseNotificationsAdapter = new HouseNotificationsAdapter(this, DB.houseNotifications);
+            houseNotificationsRecyclerView.setAdapter(houseNotificationsAdapter);
+
+            WearableLinearLayoutManager houseNotificationsLayoutManager = new WearableLinearLayoutManager(this);
+            houseNotificationsRecyclerView.setLayoutManager(houseNotificationsLayoutManager);
+        }
+        else {
+            TextView emptyBoxTextView = findViewById(R.id.textView_listHouseNotifications_emptyBox);
+            emptyBoxTextView.setVisibility(View.VISIBLE);
+
+            houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
+            houseNotificationsRecyclerView.setVisibility(View.GONE);
+        }
     }
 
     @Override
