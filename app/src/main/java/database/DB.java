@@ -37,9 +37,9 @@ public class DB {
     // TODO adjust icons
     public static ArrayList<Setting> settings = new ArrayList<Setting>() {{
         add(new Setting("Notification", R.drawable.icon_notification));
-        add(new Setting("Lights customization", R.drawable.icon_notification));
-        add(new Setting("Modify house map", R.drawable.icon_notification));
-        add(new Setting("Set priorities", R.drawable.icon_notification));
+        add(new Setting("Lights customization", R.drawable.icon_light));
+        add(new Setting("Modify house map", R.drawable.icon_housemap));
+        add(new Setting("Set priorities", R.drawable.icon_priority));
     }};
 
     public static ArrayList<Camera> cameras = new ArrayList<Camera>() {{

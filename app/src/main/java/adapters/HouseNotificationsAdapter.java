@@ -52,7 +52,10 @@ public class HouseNotificationsAdapter extends RecyclerView.Adapter<HouseNotific
         }
         else {
             holder.iconNotification.setImageResource(R.drawable.icon_notification);
+            holder.iconNotification.setColorFilter(Color.WHITE);
             holder.whereTextView.setTextColor(Color.YELLOW);
+            holder.whatTextView.setTextColor(Color.WHITE);
+            holder.whenTextView.setTextColor(Color.GRAY);
         }
 
         holder.whereTextView.setText(houseNotifications.get(position).getWhere());
