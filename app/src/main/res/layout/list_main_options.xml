@@ -4,27 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="16sp"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="8sp"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:text="MENU" />
 
     <LinearLayout
         android:onClick="openHouseNotificationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginBottom="8sp"
         android:gravity="center_vertical"
-        android:layout_margin="16sp"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_notification" />
+            android:src="@drawable/icon_notification"
+            android:layout_marginRight="8sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Notifications"
-            android:layout_marginLeft="8sp"
             android:textColor="@color/white" />
     </LinearLayout>
 
@@ -32,19 +42,21 @@
         android:onClick="openControlsView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginBottom="8sp"
         android:gravity="center_vertical"
-        android:layout_margin="16sp"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="8sp"
             android:src="@drawable/icon_notification" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8sp"
             android:textColor="@color/white"
             android:text="Controls" />
     </LinearLayout>
@@ -53,21 +65,24 @@
         android:onClick="openSettingsView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginBottom="8sp"
         android:gravity="center_vertical"
-        android:layout_margin="16sp"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="8sp"
             android:src="@drawable/icon_notification" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:layout_marginLeft="8sp"
             android:text="Settings" />
     </LinearLayout>
+
 
 </LinearLayout>
