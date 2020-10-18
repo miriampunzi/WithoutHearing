@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:layout_marginBottom="16sp"
-        android:textColor="#FFEB3B"
+        android:textColor="#2196F3"
         android:textSize="18sp"
         android:text="CONTROLS" />
 

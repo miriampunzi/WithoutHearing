@@ -11,7 +11,6 @@ import androidx.wear.widget.WearableRecyclerView;
 import adapters.SensorsMonitoringAdapter;
 import database.DB;
 import utils.Constants;
-import utils.SwipeToDeleteCallback;
 
 public class SensorsMonitoringListActivity extends WearableActivity {
 

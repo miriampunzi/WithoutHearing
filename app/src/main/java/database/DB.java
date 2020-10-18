@@ -13,6 +13,7 @@ public class DB {
 
     public static ArrayList<HouseNotification> houseNotifications = new ArrayList<HouseNotification>() {{
         add(new HouseNotification("KITCHEN", "Tap open", "Now", false));
+        add(new HouseNotification("KITCHEN", "Fire alarm on", "Now", true));
         add(new HouseNotification("BEDROOM", "TV vol = 80%", "01:25 PM", false));
         add(new HouseNotification("OUTSIDE", "Raining", "11:03 AM", false));
         add(new HouseNotification("BATHROOM", "Shower open", "07:15 AM", false));

@@ -22,6 +22,8 @@
         />
 
     <TextView
+        android:layout_margin="8sp"
+        android:textSize="22sp"
         android:id="@+id/textView_singleNotification_what"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +32,7 @@
         />
 
     <LinearLayout
+        android:layout_marginTop="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -38,13 +41,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8sp"
-            android:src="@drawable/icon_notification" />
+            android:tint="@color/white"
+            android:src="@drawable/icon_block" />
 
         <ImageView
+            android:onClick="deleteNotification"
             android:id="@+id/imageView_singleNotification_deleteIicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8sp"
+            android:layout_marginLeft="8sp"
             android:src="@drawable/icon_delete" />
 
     </LinearLayout>
