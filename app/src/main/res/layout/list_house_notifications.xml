@@ -6,7 +6,8 @@
     <androidx.wear.widget.WearableRecyclerView
         android:id="@+id/recyclerView_fragmentMenu_menuOptions"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
 
 </LinearLayout>
 

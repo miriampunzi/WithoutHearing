@@ -16,15 +16,17 @@ public class SettingsActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_settings);
 
-        // TODO put scrollbar and visible selection of row element
-
         WearableRecyclerView settingsRecyclerView = findViewById(R.id.recyclerView_listSettings);
         settingsRecyclerView.setEdgeItemsCenteringEnabled(true);
         settingsRecyclerView.setCircularScrollingGestureEnabled(true);
+
         SettingsAdapter notificationsAdapter = new SettingsAdapter(DB.settings);
         settingsRecyclerView.setAdapter(notificationsAdapter);
+
         WearableLinearLayoutManager settingsLayoutManager = new WearableLinearLayoutManager(this);
         settingsRecyclerView.setLayoutManager(settingsLayoutManager);
 
+        // Enables Always-on
+        setAmbientEnabled();
     }
 }

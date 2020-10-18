@@ -20,8 +20,6 @@ public class HouseNotificationListActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_house_notifications);
 
-        // TODO put scrollbar and visible selection of row element
-
         houseNotificationsRecyclerView = findViewById(R.id.recyclerView_fragmentMenu_menuOptions);
         houseNotificationsRecyclerView.setEdgeItemsCenteringEnabled(true);
         houseNotificationsRecyclerView.setCircularScrollingGestureEnabled(true);

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.withouthearing.HouseNotificationListActivity;
 import com.example.withouthearing.R;
-import com.example.withouthearing.SingleNotificationActivity;
+import com.example.withouthearing.SingleHouseNotificationActivity;
 
 import java.util.ArrayList;
 
@@ -52,12 +52,9 @@ public class HouseNotificationsAdapter extends RecyclerView.Adapter<HouseNotific
         holder.parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Context context = view.getContext();
-
-                Intent openSingleNotification = new Intent(context, SingleNotificationActivity.class);
+                Intent openSingleNotification = new Intent(houseNotificationListActivity, SingleHouseNotificationActivity.class);
                 openSingleNotification.putExtra("position", position);
-
-                context.startActivity(openSingleNotification);
+                houseNotificationListActivity.startActivity(openSingleNotification);
             }
         });
     }

@@ -8,7 +8,7 @@ import android.widget.TextView;
 import database.DB;
 import utils.HouseNotification;
 
-public class SingleNotificationActivity extends WearableActivity {
+public class SingleHouseNotificationActivity extends WearableActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

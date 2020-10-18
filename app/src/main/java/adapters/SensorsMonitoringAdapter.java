@@ -1,6 +1,5 @@
 package adapters;
 
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.withouthearing.DisableTimeDialogActivity;
 import com.example.withouthearing.R;
 import com.example.withouthearing.SensorsMonitoringListActivity;
-import com.example.withouthearing.SingleNotificationActivity;
 
 import java.util.ArrayList;
 

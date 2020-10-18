@@ -22,8 +22,6 @@ public class SensorsMonitoringListActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_monitoring_sensors);
 
-        // TODO put scrollbar and visible selection of row element
-
         WearableRecyclerView sensorsRecyclerView = findViewById(R.id.recyclerView_monitoringSensors);
         sensorsRecyclerView.setEdgeItemsCenteringEnabled(true);
         sensorsRecyclerView.setCircularScrollingGestureEnabled(true);
