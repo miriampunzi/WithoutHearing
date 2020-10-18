@@ -17,8 +17,6 @@ public class MainOptionsListActivity extends WearableActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_main_options);
-
-
     }
 
     public void openHouseNotificationView(View view) {

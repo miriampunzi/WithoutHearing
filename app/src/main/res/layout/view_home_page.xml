@@ -7,16 +7,26 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageView_homePage_status"
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:src="@drawable/icon_notification" />
 
     <TextView
+        android:id="@+id/textView_homePage_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Everything under control!"
+        android:text="Raining"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView_homePage_where"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#FFEB3B"
+        android:text="OUTSIDE" />
 
     <Button
         android:onClick="openMainOptions"
