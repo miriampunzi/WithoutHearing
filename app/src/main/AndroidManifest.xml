@@ -40,6 +40,11 @@
         </activity>
 
         <activity
+            android:name=".DisableTimeDialogActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
             android:name=".HouseNotificationListActivity"
             android:label="@string/app_name">
         </activity>

@@ -26,11 +26,11 @@ public class DB {
 
     // TODO icon drop
     public static ArrayList<Sensor> sensors = new ArrayList<Sensor>() {{
-        add(new Sensor(R.drawable.icon_drop, "Shower Tap", "BATHROOM"));
-        add(new Sensor(R.drawable.icon_drop, "Sink", "BATHROOM"));
-        add(new Sensor(R.drawable.icon_fire, "Stove", "KITCHEN"));
-        add(new Sensor(R.drawable.icon_volume, "Television", "LIVING ROOM"));
-        add(new Sensor(R.drawable.icon_fire, "Heater", "BEDROOM"));
+        add(new Sensor(R.drawable.icon_drop, "Shower Tap", "BATHROOM", ""));
+        add(new Sensor(R.drawable.icon_drop, "Sink", "BATHROOM", ""));
+        add(new Sensor(R.drawable.icon_fire, "Stove", "KITCHEN", ""));
+        add(new Sensor(R.drawable.icon_volume, "Television", "LIVING ROOM", ""));
+        add(new Sensor(R.drawable.icon_fire, "Heater", "BEDROOM", ""));
     }};
 
     // TODO adjust icons

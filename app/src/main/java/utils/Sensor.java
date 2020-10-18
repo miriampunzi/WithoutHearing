@@ -7,11 +7,13 @@ public class Sensor {
     private int imageIDResource;
     private String name;
     private String where;
+    private String disableTime;
 
-    public Sensor(int imageIDResource, String name, String where) {
+    public Sensor(int imageIDResource, String name, String where, String disableTime) {
         this.imageIDResource = imageIDResource;
         this.name = name;
         this.where = where;
+        this.disableTime = disableTime;
     }
 
     public int getImageIDResource() {
@@ -36,5 +38,13 @@ public class Sensor {
 
     public void setWhere(String where) {
         this.where = where;
+    }
+
+    public String getDisableTime() {
+        return disableTime;
+    }
+
+    public void setDisableTime(String disableTime) {
+        this.disableTime = disableTime;
     }
 }
