@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "854149773183",
+    "firebase_url": "https://withouthearing-9d3a9.firebaseio.com",
+    "project_id": "withouthearing-9d3a9",
+    "storage_bucket": "withouthearing-9d3a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854149773183:android:b50f4581337982876a0c4a",
+        "android_client_info": {
+          "package_name": "com.example.withouthearing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854149773183-voahoh2i5k9auh1i3ijb02s6q9jmnmdk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.withouthearing",
+            "certificate_hash": "5f45775f76408c7bb325e8563f0c9f8db9d8bb8b"
+          }
+        },
+        {
+          "client_id": "854149773183-bo4qjsg4ja9b5nd3t8g3pssl0071to3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDDxvZxgIuzcfTRexgEWLnDdPceMrxAZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854149773183-bo4qjsg4ja9b5nd3t8g3pssl0071to3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

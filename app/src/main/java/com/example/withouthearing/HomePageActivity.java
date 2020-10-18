@@ -1,16 +1,33 @@
 package com.example.withouthearing;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import database.DB;
 import utils.Constants;
 import utils.HouseNotification;
+import utils.MyFirebaseMessagingService;
+import utils.NotificationSender;
 
 public class HomePageActivity extends WearableActivity {
 
@@ -26,6 +43,8 @@ public class HomePageActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_home_page);
         updateUI();
+
+        //MyFirebaseMessagingService.getToken(this);
     }
 
     private void updateUI() {

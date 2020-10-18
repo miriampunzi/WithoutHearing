@@ -18,11 +18,6 @@ public class DB {
         add(new HouseNotification("OUTSIDE", "Raining", "11:03 AM", false));
         add(new HouseNotification("BATHROOM", "Shower open", "07:15 AM", false));
         add(new HouseNotification("LIVINGROOM", "Air condition on", "Yesterday", false));
-        add(new HouseNotification("KITCHEN", "Tap open", "2 days ago", false));
-        add(new HouseNotification("BEDROOM", "TV vol = 80%", "2 days ago", false));
-        add(new HouseNotification("OUTSIDE", "Raining", "2 days ago", false));
-        add(new HouseNotification("BATHROOM", "Shower open", "2 days ago", false));
-        add(new HouseNotification("LIVINGROOM", "Air condition on", "3 days ago", false));
     }};
 
     // TODO icon drop
